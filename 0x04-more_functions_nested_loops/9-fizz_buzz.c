@@ -20,7 +20,7 @@ int main(void)
 			printf("%s ", b);
 		else if (n % 3 == 0)
 			printf("%s ", c);
-		else
+		else if (n != 0)
 			printf("%d ", n);
 	}
 	printf("\n");
