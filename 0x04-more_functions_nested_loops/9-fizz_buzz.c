@@ -16,9 +16,9 @@ int main(void)
 	{
 		if ((n % 3 == 0) && (n % 5 == 0))
 			printf(" %s", a);
-		else if ((n % 5 == 0) && (n % 3 != 0))
+		else if /*(*/(n % 5 == 0) /*&& (n % 3 != 0))*/
 			printf(" %s", b);
-		else if ((n % 3 == 0) && (n % 5 != 0))
+		else if /*(*/(n % 3 == 0) /*&& (n % 5 != 0))*/
 			printf(" %s", c);
 		else if (n == 1)
 			printf("%d", n);											  else
