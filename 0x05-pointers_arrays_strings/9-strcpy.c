@@ -16,7 +16,7 @@ char *_strcpy(char *dest, char *src)
 	{
 		length++;
 		if (length > 98)
-			return (dest);
+			return (src);
 	}
 
 	temp = dest;
