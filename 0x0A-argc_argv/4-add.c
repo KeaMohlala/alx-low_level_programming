@@ -13,10 +13,10 @@
 
 int check_digit(int count, char *n[])
 {
-int i;
+unsigned int i;
 int add = 0;
 
-for (i = 1; i < count; i++)
+for (i = 1; i < (unsigned int) count; i++)
 {
 if (isdigit(*n[i]) != 0)
 {
