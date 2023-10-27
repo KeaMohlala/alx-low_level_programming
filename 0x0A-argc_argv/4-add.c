@@ -14,7 +14,7 @@
 int check_digit(int count, char *n[])
 {
 unsigned int i;
-int add = 0;
+unsigned int add = 0;
 
 for (i = 1; i < (unsigned int) count; i++)
 {
