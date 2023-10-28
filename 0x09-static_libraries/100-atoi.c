@@ -5,7 +5,4 @@
  * @s: pointer to the string
  * Return: integer value
  */
-int _atoi(char *s)
-{
-	return (0);
-}
+
