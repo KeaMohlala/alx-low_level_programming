@@ -20,7 +20,7 @@ int _strlen(char *str)
 }
 
 /**
- * str_concat - concetenates tow strings to newly located
+ * str_concat - concetenates two strings to newly located
  * memory on the heap
  * @s1: string 1
  * @s2: string 2
@@ -29,29 +29,29 @@ int _strlen(char *str)
 
 char *str_concat(char *s1, char *s2)
 {
-	int i = 0;
-	int j = 0;
-	char *ptr;
+int i = 0;
+int j = 0;
+char *ptr;
 
-	if (s1 == 0 || s2 == 0)
-	return (0);
-	ptr = (char *)malloc(_strlen(s1) + _strlen(s2) + 1);
-	if (ptr == 0)
-	return (0);
-	else
-	{
-		while (s1[i])
-		{
-			ptr[i] = s1[i];
-			i++;
-		}
-		while (s2[j])
-		{
-			ptr[i] = s2[j];
-			j++;
-			i++;
-		}
-		ptr[i] = '\0';
-	}
-	return (ptr);
+if (s1 == 0)
+s1 = "";
+if (s2 == 0)
+s2 = "";
+
+ptr = (char *)malloc(_strlen(s1) + _strlen(s2) + 1);
+if (ptr == 0)
+return (0);
+while (s1[i])
+{
+ptr[i] = s1[i];
+i++;
+}
+while (s2[j])
+{
+ptr[i] = s2[j];
+j++;
+i++;
+}
+ptr[i] = '\0';
+return (ptr);
 }
