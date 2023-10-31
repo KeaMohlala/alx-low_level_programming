@@ -16,14 +16,14 @@ int **alloc_grid(int width, int height)
 	return (0);
 
 	/*allocate memory for the 1D arrays i.e. array of pointers*/
-	ptr = (int **)malloc(height * 4);
+	ptr = (int **)malloc(height * 8);
 	if (ptr == 0)
 	return (0);
 
 	/*allocate memory for each 1D array (width) of integers*/
 	for (i = 0; i < height; i++)
 	{
-		ptr[i] = (int *)malloc(width * 4);
+		ptr[i] = (int *)malloc(width * 8);
 		if (ptr[i] == 0)
 		{
 			for (j = 0; j < i; j++)
