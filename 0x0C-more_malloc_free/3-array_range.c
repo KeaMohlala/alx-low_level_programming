@@ -10,25 +10,27 @@
 
 int *array_range(int min, int max)
 {
-int *ptr, i;
-int num_elements;
+int *ptr;
+int num_elements = 0;
+int element_size = sizeof(int);
+int i, j;
 
 /*check if min is greater than max*/
 if (min > max)
 return (0);
 
 /*determine the number of elements of the array*/
-num_elements = max - min + 1;
+for (i = min; i <= max; i++)
+num_elements++;
 
 /*assign memory for the array of integers*/
-
-ptr = malloc(num_elements * sizeof(int));
+ptr = malloc(element_size * num_elements);
 if (ptr == 0)
 return (0);
 
 /*assign each element of the array the correct value from min to max*/
-for (i = 0; i < num_elements; i++)
-ptr[i] = min + i;
+for (j = 0; j < num_elements; j++)
+ptr[j] = min + j;
 
 return (ptr);
 }
