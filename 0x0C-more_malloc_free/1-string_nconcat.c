@@ -55,7 +55,7 @@ while (s1[i])
 ptr[i] = s1[i];
 i++;
 }
-while (s2[j] && j < n)
+while (j < n)
 {
 ptr[i] = s2[j];
 j++;
