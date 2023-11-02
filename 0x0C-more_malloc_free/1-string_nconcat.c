@@ -16,17 +16,18 @@ unsigned int i = 0;
 unsigned int j = 0;
 char *ptr;
 unsigned int len_s1 = strlen(s1);
-unsigned int len_s2 = strlen(s2);
+/*unsigned int len_s2 = strlen(s2)*/
 
 if (s1 == 0)
 s1 = "";
 if (s2 == 0)
 s2 = "";
 
-if (n >= len_s2)
-ptr = malloc(len_s1 + len_s2 + 1);
-else
-ptr = malloc(sizeof(s1) + n);
+ /*if (n >= len_s2)*/
+ /*ptr = malloc(len_s1 + len_s2 + 1)*/
+ /*else*/
+
+ptr = malloc(len_s1 + n + 1);
 if (ptr == 0)
 return (0);
 
