@@ -25,8 +25,8 @@ s2 = "";
 
 if (n >= len_s2)
 ptr = malloc(len_s1 + len_s2 + 1);
-else if (n < len_s2)
-ptr = malloc(len_s1 + n + 1);
+else
+ptr = malloc(sizeof(s1) + n);
 if (ptr == 0)
 return (0);
 
