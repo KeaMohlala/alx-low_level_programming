@@ -43,9 +43,9 @@ if (s2 == NULL)
 s2 = "";
 
 if (n >= len_s2)
-ptr = malloc(len_s1 + len_s2 + 1);
+ptr = malloc((len_s1 + len_s2 + 1) * sizeof(char));
 else
-ptr = malloc(len_s1 + n + 1);
+ptr = malloc((len_s1 + n + 1) * sizeof(char));
 if (ptr == NULL)
 return (NULL);
 
