@@ -16,12 +16,21 @@ void init_dog(struct dog *d, char *name, float age, char *owner);
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
 	d->name = (char *)malloc(strlen(name) + 1);
-	if (d == NULL)
-	d->name = 0;
+	if (d->name == NULL)
+	{
+		printf("memory could not be allocated for name.\n");
+		return;
+	}
 	strcpy(d->name, name);
+
 	d->owner = (char *)malloc(strlen(owner) + 1);
-	if (d == NULL)
-	d->owner = 0;
+	if (d->owner == NULL)
+	{
+		printf("memory could not be allocated for owner.\n");
+		free(d->name);
+		return;
+	}
 	strcpy(d->owner, owner);
+
 	d->age = age;
 }
