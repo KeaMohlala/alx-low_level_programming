@@ -17,7 +17,7 @@ int num1 = atoi(argv[1]);
 int num2 = atoi(argv[3]);
 int (*operator)(int, int);
 
-if (argc != 4)
+if (argc == 3)
 {
 printf("Error\n");
 exit(98);
