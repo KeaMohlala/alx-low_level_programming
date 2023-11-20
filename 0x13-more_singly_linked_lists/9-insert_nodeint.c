@@ -22,11 +22,11 @@ return (NULL);
 new_node->n = n;
 new_node->next = NULL;
 
-if (idx == 0)
-return (new_node);
+/*if (idx == 0)*/
+/*return (new_node);*/
 for (i = 0; i < idx - 1; i++)
 {
-if (ptr->next == NULL)
+if (ptr == NULL)
 return (NULL);
 ptr = ptr->next;
 }
