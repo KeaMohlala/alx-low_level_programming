@@ -22,4 +22,5 @@ ptr = ptr->next;
 free(*head);
 *head = ptr;
 }
+*head = NULL;
 }
