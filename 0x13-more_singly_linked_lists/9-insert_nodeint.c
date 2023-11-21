@@ -16,6 +16,9 @@ listint_t *new_node;
 listint_t *ptr = *head;
 unsigned int i;
 
+if (*head == NULL)
+return (NULL);
+
 new_node = malloc(sizeof(listint_t));
 if (new_node == NULL)
 return (NULL);
@@ -23,7 +26,22 @@ new_node->n = n;
 new_node->next = NULL;
 
 if (idx == 0)
+{
+new_node->next = *head;
+*head = new_node;
 return (new_node);
+}
+else if (idx == 1)
+{
+if (ptr == NULL)
+return (NULL);
+ptr = ptr->next;
+(*head)->next = new_node;
+new_node->next = ptr;
+return (new_node);
+}
+else
+{
 for (i = 0; i < idx - 1; i++)
 {
 if (ptr == NULL)
@@ -32,5 +50,6 @@ ptr = ptr->next;
 }
 new_node->next = ptr->next;
 ptr->next = new_node;
+}
 return (new_node);
 }
