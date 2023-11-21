@@ -16,7 +16,7 @@ listint_t *new_node;
 listint_t *ptr = *head;
 unsigned int i;
 
-if (*head == NULL)
+if (head == NULL)
 return (NULL);
 
 new_node = malloc(sizeof(listint_t));
