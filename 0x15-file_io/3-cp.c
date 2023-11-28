@@ -22,7 +22,7 @@ while (count_read != 0)
 count_read = read(fd_from, buf, 1024);
 if (count_read == -1)
 {
-dprintf(STDERR_FILENO, "Error: Can't read from %s\n", *file_from);
+dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", *file_from);
 exit(98);
 }
 count_print = write(fd_to, buf, count_read);
@@ -57,7 +57,7 @@ exit(99);
 fd_from = open(file_from, O_RDONLY);
 if (fd_from == -1)
 {
-dprintf(STDERR_FILENO, "Error: Can't read from %s\n", file_from);
+dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 exit(98);
 }
 
@@ -88,7 +88,7 @@ int main(int ac, char **av)
 {
 if (ac != 3)
 {
-dprintf(STDERR_FILENO, "Usage: %s %s\n", av[1], av[2]);
+dprintf(STDERR_FILENO, "Usage: cp file_from file_to");
 exit(97);
 }
 
