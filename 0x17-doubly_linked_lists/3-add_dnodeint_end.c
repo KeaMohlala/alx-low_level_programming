@@ -15,6 +15,8 @@ dlistint_t *temp;
 dlistint_t *temp2;
 
 temp = malloc(sizeof(dlistint_t));
+if (temp == NULL)
+return (NULL);
 temp->next = NULL;
 temp->n = n;
 
