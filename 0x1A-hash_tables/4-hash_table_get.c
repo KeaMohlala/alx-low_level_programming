@@ -16,6 +16,9 @@ hash_node_t *temp;
 index = key_index((unsigned char *)key, ht->size);
 temp = ht->array[index];
 
+if (temp == NULL)
+return (NULL);
+
 while (temp != NULL)
 {
 if (strcmp(temp->key, key) == 0)
