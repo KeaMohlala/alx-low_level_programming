@@ -13,7 +13,6 @@ char **print_key, **print_value;
 
 if (ht == NULL)
 {
-printf("{}");
 return;
 }
 
