@@ -1,0 +1,15 @@
+#variables
+CC = gcc
+NAME = school
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+
+.PHONY = all
+
+#build executable
+all: ${OBJ}
+	${CC} ${OBJ} -o ${NAME}
+
+#build object files
+%.o: %.c
+	${CC} -c -o $@ $<
