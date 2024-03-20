@@ -1,0 +1,31 @@
+#variables
+CC = gcc
+NAME = school
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+RM = rm -f
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+.PHONY = all oclean clean fclean re
+
+#build executable
+all: ${OBJ}
+	${CC} ${OBJ} -o ${NAME}
+
+#build object files
+%.o: %.c
+	${CC} ${CFLAGS} -c -o $@ $<
+
+#cleanup
+clean:
+	-${RM} *~ ${NAME}
+
+fclean:
+	-${RM} ${OBJ}
+	-${RM} *~ ${NAME}
+
+oclean:
+	-${RM} ${OBJ}
+
+#force complete rebuild
+re: oclean all
